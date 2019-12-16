@@ -1,6 +1,5 @@
-# google-services
-
-**/google-services.json
+# ignorar google-services
+google-services.json
 
 # Miscellaneous
 *.class
