@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_whatsapp/pages/group_page.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(FirebaseWhatsApp());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class FirebaseWhatsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,10 +11,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: Scaffold(
-        appBar: AppBar(title: Text('Firebase WhatsApp')),        
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (_) => GroupPage(),
+      },
     );
   }
 }
+
 
