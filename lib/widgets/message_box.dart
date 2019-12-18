@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
 
 class MessageBox extends StatefulWidget {
   final Function onSend;
-  MessageBox({ this.onSend });
-  
+  MessageBox({this.onSend});
+
   @override
   _MessageBoxState createState() => _MessageBoxState();
 }
@@ -35,13 +34,32 @@ class _MessageBoxState extends State<MessageBox> {
       padding: const EdgeInsets.all(8.0),
       child: Row(
         children: <Widget>[
-          Expanded(child: TextField(
-            controller: _controller,
-            onSubmitted: _send,
-          ),),
-          IconButton(
-            icon: Icon(Icons.send),
-            onPressed: () =>_send(_controller.text),
+          Expanded(
+            child: Material(
+              elevation: 2,
+              shape: StadiumBorder(),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16),
+                child: TextField(
+                  controller: _controller,
+                  onSubmitted: _send,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(width: 8),
+          Material(
+            color: Theme.of(context).primaryColor,
+            shape: CircleBorder(),
+            elevation: 2,
+            child: IconButton(
+              icon: Icon(Icons.send),
+              onPressed: () => _send(_controller.text),
+              color: Colors.white,
+            ),
           ),
         ],
       ),
