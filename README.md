@@ -1,16 +1,11 @@
-# flutter_firebase_whatsapp
+# Clon de WhatsApp usando Firebase
 
-A new Flutter project.
+Un proyecto educativo sobre cómo programar en Flutter un clon de WhatsApp,
+usando Firebase (Cloud Firestore, Firebase Authentication y Firebase Storage).
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Links a los vídeos:
+* [WhatsApp 1](https://youtu.be/icJjza9OI98).
+* [WhatsApp 2](https://youtu.be/mbY0v5tuBF8).
+* [WhatsApp 3](https://youtu.be/kng9C82ZAIo).
+* [WhatsApp 4](https://youtu.be/Rc8mXSPX3S8).
+* [WhatsApp 5](https://youtu.be/8kvVxaOp8vE).
