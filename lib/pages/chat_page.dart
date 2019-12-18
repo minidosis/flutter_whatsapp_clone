@@ -3,6 +3,7 @@ import 'package:flutter_firebase_whatsapp/db.dart' as db;
 import 'package:flutter_firebase_whatsapp/model/group.dart';
 import 'package:flutter_firebase_whatsapp/model/message.dart';
 import 'package:flutter_firebase_whatsapp/widgets/loading.dart';
+import 'package:flutter_firebase_whatsapp/widgets/message_box.dart';
 import 'package:flutter_firebase_whatsapp/widgets/message_list.dart';
 import 'package:flutter_firebase_whatsapp/widgets/red_error.dart';
 
@@ -21,10 +22,20 @@ class ChatPage extends StatelessWidget {
           if (!snapshot.hasData) {
             return Loading();
           }
-          return MessageList(messages: snapshot.data);
+          return Column(
+            children: <Widget>[
+              Expanded(
+                child: MessageList(messages: snapshot.data),
+              ),
+              MessageBox(onSend: (text) {
+                print(text);
+              }),
+            ],
+          );
         },
       ),
     );
   }
 }
+
 
